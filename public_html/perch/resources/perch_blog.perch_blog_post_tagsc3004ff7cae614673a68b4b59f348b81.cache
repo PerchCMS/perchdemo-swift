@@ -1,0 +1,8 @@
+
+<h3>Tags</h3>
+<ul>
+
+    <li><a href="archive.php?tag=young-people" rel="tag">young people</a></li>
+
+    <li><a href="archive.php?tag=relocation" rel="tag">relocation</a></li>
+</ul>

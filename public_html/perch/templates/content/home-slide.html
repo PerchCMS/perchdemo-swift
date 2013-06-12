@@ -1,0 +1,4 @@
+<h3><perch:content id="heading" title="true" type="text" label="Heading" help="This will form the clickable tab for this slide" required="true"/></h3>
+<perch:if exists="subheading"><h4><perch:content id="subheading" type="text" label="Subheading" /></h4></perch:if>
+<perch:if exists="image"><img class="border" src="<perch:content id="image" type="image" label="Slide image" width="520" height="520" crop="true" />" alt="<perch:content id="alt" type="text" label="Image description" />"/></perch:if>
+<perch:content id="body" required="true" type="textarea" label="Slide body" textile="true" editor="markitup" />

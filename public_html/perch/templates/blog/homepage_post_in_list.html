@@ -1,0 +1,20 @@
+<perch:before>
+<div class="blog-posts">
+    <h2 class="section-header">Latest blog posts</h2>
+</perch:before>
+    <article class="hentry">
+        <time datetime="<perch:blog id="postDateTime" format="%Y-%m-%d" />" pubdate class="published"><perch:blog id="postDateTime" format="%d %B %Y" /></time>
+
+        <h3 class="entry-title"><perch:blog id="postTitle" /></h2>
+       
+        
+        <div class="entry-summary">
+        <perch:blog id="excerpt" type="textarea" textile="true" />
+        <p class="read-more"><a href="<perch:blog id="postURL" />" rel="bookmark" class="entry-title">Read more</a></p>
+        </div>
+
+
+    </article>
+<perch:after>
+</div>
+</perch:after>

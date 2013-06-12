@@ -1,0 +1,15 @@
+<div class="article vcard">
+	<h3 class="fn n">
+		<span class="given-name"><perch:content id="givenname" type="text" label="Given name" required="true" title="true" /></span>
+		<span class="family-name"><perch:content id="familyname" type="text" label="Family name" required="true" title="true" /></span>
+	</h3>
+	<p class="meta role"><perch:content id="role" type="text" label="Role" required="true" /></p>
+				
+	<div class="img">
+		<img class="border" src="<perch:content id="image" type="image" label="Upload image" width="400" height="400" />" alt="<perch:content id="givenname" type="text" /> <perch:content id="familyname" type="text" />"/>
+	</div>
+				
+	<div class="description">
+		<perch:content id="bio" type="textarea" label="Biography" textile="true" editor="markitup" required="true" />
+	</div>
+</div>

@@ -1,0 +1,10 @@
+
+<h3>Categories</h3>
+<ul>
+
+    <li><a href="archive.php?cat=business">Business (2)</a></li>
+
+    <li><a href="archive.php?cat=employees">Employees (1)</a></li>
+
+    <li><a href="archive.php?cat=relocation">Relocation (2)</a></li>
+</ul>
