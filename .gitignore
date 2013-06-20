@@ -1,6 +1,6 @@
 config.private.php
 public_html/perch/addons/apps
-public_html/perch/addons/plugins/markitup
+public_html/perch/addons/plugins/editors
 public_html/perch/addons/feathers
 public_html/perch/addons/lang
 public_html/perch/runtime.php
