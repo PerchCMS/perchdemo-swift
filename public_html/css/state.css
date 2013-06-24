@@ -246,6 +246,10 @@ a:hover, a:active {
 		width: 34.6875rem; /* 555/16 */
 	}
 
+	.active-slideshow .slide a:link, .active-slideshow .slide a:visited {
+		color: #ffffff;
+	}
+
 	body .active-slideshow .not-selected {
 		height: 0;
 		margin: 0;

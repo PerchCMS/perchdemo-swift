@@ -47,7 +47,7 @@
 		</div>
 		<div class="module">
 			<h3>Services to suit any budget</h3>
-			<p>Why not give us a call on +44 (0) 1628 633301?</p>
+			<p>Why not give us a call on +44 (0) 123 45678?</p>
 		</div>
 	</aside>
 </div>
