@@ -269,6 +269,10 @@
 	padding-bottom: .9375rem; /* 15/16 */
 }
 
+.team .article ul.links {
+	clear: left;
+}
+
 /* 
  	Comments
 */

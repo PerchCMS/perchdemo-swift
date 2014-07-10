@@ -11,5 +11,11 @@
 				
 	<div class="description">
 		<perch:content id="bio" type="textarea" label="Biography" textile="true" editor="markitup" required="true" />
+
+		<perch:repeater id="links" label="Links" max="5">
+			<perch:before><ul class="links"></perch:before>
+				<li><a href="<perch:content id="url" type="text" label="URL" />"><perch:content id="linktext" type="text" label="Link Text" /></a></li>
+			<perch:after></ul></perch:after>
+		</perch:repeater>
 	</div>
 </div>
