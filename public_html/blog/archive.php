@@ -60,6 +60,7 @@
 		        
 		        /* --------------------------- POSTS BY CATEGORY --------------------------- */
 		        if (perch_get('cat')) {
+		        	
 		            echo '<h1>Archive of: '.perch_blog_category(perch_get('cat'), true).'</h1>';
 
 		            perch_blog_custom(array(

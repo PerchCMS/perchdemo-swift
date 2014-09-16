@@ -11,3 +11,9 @@
         </div>
     </div>
 </div>
+
+<perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes" suppress="true" order="5">
+    <a href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
+    <perch:category id="catTitle" type="text" />
+    </a>
+</perch:categories>
