@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.41, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: db_demo_swift
 -- ------------------------------------------------------
--- Server version	5.5.38-0+wheezy1
+-- Server version	5.5.41-0+wheezy1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -292,7 +292,7 @@ CREATE TABLE `perch2_categories` (
   `catTitle` char(64) NOT NULL DEFAULT '',
   `catSlug` char(64) NOT NULL DEFAULT '',
   `catPath` char(255) NOT NULL DEFAULT '',
-  `catDisplayPath` char(255) NOT NULL,
+  `catDisplayPath` char(255) NOT NULL DEFAULT '',
   `catOrder` int(10) unsigned NOT NULL DEFAULT '0',
   `catTreePosition` char(255) NOT NULL DEFAULT '000',
   `catDynamicFields` text NOT NULL,
@@ -672,6 +672,9 @@ CREATE TABLE `perch2_pages` (
   `pageAttributes` text NOT NULL,
   `pageAttributeTemplate` varchar(255) NOT NULL DEFAULT 'default.html',
   `pageTemplate` char(255) NOT NULL DEFAULT '',
+  `templateID` int(10) unsigned NOT NULL DEFAULT '0',
+  `pageSubpageTemplates` varchar(255) NOT NULL DEFAULT '',
+  `pageCollections` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`pageID`),
   KEY `idx_parent` (`pageParentID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
@@ -683,7 +686,7 @@ CREATE TABLE `perch2_pages` (
 
 LOCK TABLES `perch2_pages` WRITE;
 /*!40000 ALTER TABLE `perch2_pages` DISABLE KEYS */;
-INSERT INTO `perch2_pages` VALUES (1,0,'/index.php','Home page','Home page',0,1,1,'','000-001','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(2,0,'/about/index.php','About','About',0,2,1,'/about','000-002','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(3,2,'/about/history.php','History','History',0,1,2,'/about/history','000-002-001','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(4,0,'/contact.php','Contact','Contact',0,3,1,'/contact','000-003','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(5,0,'/team.php','Team','Team',0,4,1,'/team','000-004','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(6,0,'/testimonials.php','Testimonials','Testimonials',0,5,1,'/testimonials','000-005','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(7,0,'/blog/index.php','Blog','Blog',0,6,1,'/blog','000-006','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(8,7,'/blog/post.php','Post','Post',0,1,2,'/blog/post','000-006-001','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(9,7,'/blog/archive.php','Archive','Archive',0,2,2,'/blog/archive','000-006-002','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','');
+INSERT INTO `perch2_pages` VALUES (1,0,'/index.php','Home page','Home page',0,1,1,'','000-001','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(2,0,'/about/index.php','About','About',0,2,1,'/about','000-002','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(3,2,'/about/history.php','History','History',0,1,2,'/about/history','000-002-001','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(4,0,'/contact.php','Contact','Contact',0,3,1,'/contact','000-003','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(5,0,'/team.php','Team','Team',0,4,1,'/team','000-004','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(6,0,'/testimonials.php','Testimonials','Testimonials',0,5,1,'/testimonials','000-005','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(7,0,'/blog/index.php','Blog','Blog',0,6,1,'/blog','000-006','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(8,7,'/blog/post.php','Post','Post',0,1,2,'/blog/post','000-006-001','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(9,7,'/blog/archive.php','Archive','Archive',0,2,2,'/blog/archive','000-006-002','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'','');
 /*!40000 ALTER TABLE `perch2_pages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -834,7 +837,7 @@ CREATE TABLE `perch2_settings` (
 
 LOCK TABLES `perch2_settings` WRITE;
 /*!40000 ALTER TABLE `perch2_settings` DISABLE KEYS */;
-INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#ffffff'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/swift'),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.7',0,'done'),('latest_version',0,'2.5.3'),('perch_blog_post_url',0,'/blog/{postSlug}'),('perch_blog_update',0,'5.0'),('headerScheme',0,'light'),('perch_blog_slug_format',0,'%Y-%m-%d-{postTitle}'),('perch_blog_akismet_key',0,''),('dashboard',0,'0'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('update_2.2.9',0,'done'),('update_2.3.1',0,'done'),('update_2.4.4',0,'done'),('on_sale_version',0,'2.6.4'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done');
+INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#ffffff'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/swift'),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.7',0,'done'),('latest_version',0,'2.5.3'),('perch_blog_post_url',0,'/blog/{postSlug}'),('perch_blog_update',0,'5.0'),('headerScheme',0,'light'),('perch_blog_slug_format',0,'%Y-%m-%d-{postTitle}'),('perch_blog_akismet_key',0,''),('dashboard',0,'0'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('update_2.2.9',0,'done'),('update_2.3.1',0,'done'),('update_2.4.4',0,'done'),('on_sale_version',0,'2.7.10'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done');
 /*!40000 ALTER TABLE `perch2_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -947,7 +950,7 @@ CREATE TABLE `perch2_users` (
 
 LOCK TABLES `perch2_users` WRITE;
 /*!40000 ALTER TABLE `perch2_users` DISABLE KEYS */;
-INSERT INTO `perch2_users` VALUES (1,'{username}','{password}','2013-05-02 12:55:56','2014-09-16 13:06:00','2014-09-16 12:15:26','{firstname}','{lastname}','{email}',1,'29613e0eb35ee18a215c9f42b2c3f1c1',2,1);
+INSERT INTO `perch2_users` VALUES (1,'{username}','$P$Bd9KeQQUdXoJztnSi908AT2TRRLbkJ.','2013-05-02 12:55:56','2015-01-30 09:16:01','2015-01-30 09:15:26','{firstname}','{lastname}','{email}',1,'3c0ecafab32c28cc729877a1305b512c',2,1);
 /*!40000 ALTER TABLE `perch2_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -960,4 +963,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-16  6:36:40
+-- Dump completed on 2015-01-30  1:23:21
