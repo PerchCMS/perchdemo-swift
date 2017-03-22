@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.47, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.54, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: db_demo_swift
 -- ------------------------------------------------------
--- Server version	5.5.47-0+deb7u1
+-- Server version	5.5.54-0+deb7u2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -596,6 +596,39 @@ INSERT INTO `perch2_forms_responses` VALUES (1,1,'2013-05-04 08:39:38','{\"field
 UNLOCK TABLES;
 
 --
+-- Table structure for table `perch2_menu_items`
+--
+
+DROP TABLE IF EXISTS `perch2_menu_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `perch2_menu_items` (
+  `itemID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `parentID` int(10) unsigned NOT NULL DEFAULT '0',
+  `itemType` enum('menu','app','link') NOT NULL DEFAULT 'app',
+  `itemOrder` int(10) unsigned NOT NULL DEFAULT '1',
+  `itemTitle` char(64) NOT NULL DEFAULT 'Unnamed item',
+  `itemValue` char(255) DEFAULT NULL,
+  `itemPersists` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `itemActive` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `privID` int(10) DEFAULT NULL,
+  `userID` int(10) unsigned NOT NULL DEFAULT '0',
+  `itemInternal` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`itemID`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `perch2_menu_items`
+--
+
+LOCK TABLES `perch2_menu_items` WRITE;
+/*!40000 ALTER TABLE `perch2_menu_items` DISABLE KEYS */;
+INSERT INTO `perch2_menu_items` VALUES (1,0,'menu',1,'My Site',NULL,1,1,NULL,0,0),(2,0,'menu',2,'Organise',NULL,1,1,NULL,0,0),(3,1,'app',1,'Pages','content',0,1,NULL,0,0),(4,2,'app',1,'Categories','categories',0,1,22,0,0),(5,2,'app',2,'Assets','assets',0,1,NULL,0,0),(7,0,'app',1,'Settings','settings',1,0,NULL,0,1),(8,0,'app',1,'Users','users',1,0,NULL,0,1),(9,0,'app',1,'Help','help',1,0,NULL,0,1),(10,1,'app',99,'Blog','perch_blog',0,1,NULL,0,0),(11,1,'app',99,'Forms','perch_forms',0,1,NULL,0,0),(12,1,'app',99,'Questions','perch_questions',0,1,NULL,0,0);
+/*!40000 ALTER TABLE `perch2_menu_items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `perch2_navigation`
 --
 
@@ -871,7 +904,7 @@ CREATE TABLE `perch2_settings` (
 
 LOCK TABLES `perch2_settings` WRITE;
 /*!40000 ALTER TABLE `perch2_settings` DISABLE KEYS */;
-INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#ffffff'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/swift'),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.7',0,'done'),('latest_version',0,'2.8.15'),('perch_blog_post_url',0,'/blog/{postSlug}'),('perch_blog_update',0,'5.0.1'),('headerScheme',0,'light'),('perch_blog_slug_format',0,'%Y-%m-%d-{postTitle}'),('perch_blog_akismet_key',0,''),('dashboard',0,'0'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('update_2.2.9',0,'done'),('update_2.3.1',0,'done'),('update_2.4.4',0,'done'),('on_sale_version',0,'2.8.29'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_2.8.29',0,'done');
+INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#ffffff'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/swift'),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.7',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}'),('perch_blog_update',0,'5.0.1'),('headerScheme',0,'light'),('perch_blog_slug_format',0,'%Y-%m-%d-{postTitle}'),('perch_blog_akismet_key',0,''),('dashboard',0,'0'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('update_2.2.9',0,'done'),('update_2.3.1',0,'done'),('update_2.4.4',0,'done'),('on_sale_version',0,''),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_2.8.29',0,'done'),('update_3.0b17',0,'done');
 /*!40000 ALTER TABLE `perch2_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1014,7 +1047,7 @@ CREATE TABLE `perch2_users` (
 
 LOCK TABLES `perch2_users` WRITE;
 /*!40000 ALTER TABLE `perch2_users` DISABLE KEYS */;
-INSERT INTO `perch2_users` VALUES (1,'{username}','$P$Bd9KeQQUdXoJztnSi908AT2TRRLbkJ.','2013-05-02 12:55:56','2016-04-10 05:57:05','2016-04-10 05:56:42','{firstname}','{lastname}','{email}',1,'f9520693e8e25398210aa78b4c3d4773',2,1,'expired','2015-01-01 00:00:00',NULL,0);
+INSERT INTO `perch2_users` VALUES (1,'{username}','$P$Bd9KeQQUdXoJztnSi908AT2TRRLbkJ.','2013-05-02 12:55:56','2017-03-22 10:42:25','2017-03-22 10:11:56','{firstname}','{lastname}','{email}',1,'48f78ebe317550c8015b7213b8e7bc7d',2,1,'expired','2015-01-01 00:00:00',NULL,0);
 /*!40000 ALTER TABLE `perch2_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1027,4 +1060,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-04-09 23:00:27
+-- Dump completed on 2017-03-22  4:20:05
