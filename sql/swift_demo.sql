@@ -904,7 +904,7 @@ CREATE TABLE `perch2_settings` (
 
 LOCK TABLES `perch2_settings` WRITE;
 /*!40000 ALTER TABLE `perch2_settings` DISABLE KEYS */;
-INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#ffffff'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/swift'),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.7',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}'),('perch_blog_update',0,'5.0.1'),('headerScheme',0,'light'),('perch_blog_slug_format',0,'%Y-%m-%d-{postTitle}'),('perch_blog_akismet_key',0,''),('dashboard',0,'0'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('update_2.2.9',0,'done'),('update_2.3.1',0,'done'),('update_2.4.4',0,'done'),('on_sale_version',0,''),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_2.8.29',0,'done'),('update_3.0b17',0,'done');
+INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#ffffff'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/swift'),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.7',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}'),('perch_blog_update',0,'5.0.1'),('headerScheme',0,'light'),('perch_blog_slug_format',0,'%Y-%m-%d-{postTitle}'),('perch_blog_akismet_key',0,''),('dashboard',0,'0'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('update_2.2.9',0,'done'),('update_2.3.1',0,'done'),('update_2.4.4',0,'done'),('on_sale_version',0,''),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_2.8.29',0,'done'),('update_3.0b17',0,'done'),('update_3.0',0,'done');
 /*!40000 ALTER TABLE `perch2_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1047,7 +1047,7 @@ CREATE TABLE `perch2_users` (
 
 LOCK TABLES `perch2_users` WRITE;
 /*!40000 ALTER TABLE `perch2_users` DISABLE KEYS */;
-INSERT INTO `perch2_users` VALUES (1,'{username}','$P$Bd9KeQQUdXoJztnSi908AT2TRRLbkJ.','2013-05-02 12:55:56','2017-03-22 10:42:25','2017-03-22 10:11:56','{firstname}','{lastname}','{email}',1,'48f78ebe317550c8015b7213b8e7bc7d',2,1,'expired','2015-01-01 00:00:00',NULL,0);
+INSERT INTO `perch2_users` VALUES (1,'{username}','$P$Bd9KeQQUdXoJztnSi908AT2TRRLbkJ.','2013-05-02 12:55:56','2017-03-26 15:22:42','2017-03-26 15:22:16','{firstname}','{lastname}','{email}',1,'b1c0d41ae2f7437565698fcf81bc180f',2,1,'expired','2015-01-01 00:00:00',NULL,0);
 /*!40000 ALTER TABLE `perch2_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1060,4 +1060,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-22  4:20:05
+-- Dump completed on 2017-03-26  8:24:16
